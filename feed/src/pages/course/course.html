@@ -1,0 +1,45 @@
+<ion-header>
+	<ion-navbar color="silver">
+		<ion-title>
+			Course Summary
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<!--<ion-card>
+		<ion-card-content>
+			<ion-card-title>
+				Notices
+			</ion-card-title>
+			<hr/>
+		</ion-card-content>
+		<ion-item>
+			<h2>Final Examination</h2>
+			<p>You wii be getting questions from all the lectures.</p>
+		</ion-item>
+	</ion-card>-->
+
+	<ion-card *ngFor="let con of contents">
+		<!--<ion-card-content>
+			<ion-card-title>
+				Contents
+			</ion-card-title>
+			<hr/>
+		</ion-card-content>-->
+		<ion-item>
+			<!--<ion-icon name="md-download" item-right medium></ion-icon>-->
+			<h2 (click)="onClickcontent(con)">{{ con.title }}</h2> <ion-icon item-right name="ios-arrow-forward"></ion-icon>	
+		</ion-item>
+	</ion-card>
+
+	<div padding>
+		<button ion-button color="primary" outline round block (click)="postFeedback()">Send Feedback</button>
+		<button ion-button color="primary" outline round block (click)="postForum()">Student Forum</button>
+	</div>
+
+
+
+
+
+</ion-content>

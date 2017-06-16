@@ -1,0 +1,17 @@
+<ion-header>
+	<ion-navbar color="silver">
+		<ion-title>
+			Feedbacks
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<ion-list>
+		<ion-item *ngFor="let feed of feeds">
+			<ion-icon name="ios-book" item-left medium></ion-icon>
+			<h2>{{ feed.description }}</h2>	
+			<p style="color:gray">{{ feed.createdDate }}</p>
+		</ion-item>
+	</ion-list>
+</ion-content>

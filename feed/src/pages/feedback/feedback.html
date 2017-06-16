@@ -1,0 +1,32 @@
+<ion-header>
+	<ion-navbar color="silver">
+		<ion-title>
+			Feedback Form
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+
+	<ion-card>
+
+		<ion-list>
+			
+			<ion-label style="padding-left:17px;padding-top:3%;color:gray">Message Description</ion-label>
+			<ion-item>
+				<ion-textarea [(ngModel)]="noticeDescription" style="border:1px solid lightgray;border-radius:7px" class="textbox" item-height="100"></ion-textarea>
+			</ion-item>
+
+			<ion-label style="padding-left:17px;color:gray">Rate(X%)</ion-label>
+			<ion-item>
+				<ion-input [(ngModel)]="noticeRate" style="border:1px solid lightgray;border-radius:7px" type="text"></ion-input>
+			</ion-item>
+
+			<div padding>
+				<button ion-button color="primary" round block (click)="postNotice()">Send Feedback</button>
+			</div>
+		</ion-list>
+	</ion-card>
+
+
+</ion-content>

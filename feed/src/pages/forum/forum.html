@@ -1,0 +1,56 @@
+<ion-header>
+	<ion-navbar color="silver">
+		<ion-title>
+			Public Forum
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+
+	<ion-card>
+
+
+
+		<ion-list>
+			<ion-label style="padding-left:17px;color:gray">Message Title</ion-label>
+			<ion-item>
+				<ion-input [(ngModel)]="noticeTitle" style="border:1px solid lightgray;border-radius:7px" type="text"></ion-input>
+			</ion-item>
+			<ion-label style="padding-left:17px;padding-top:3%;color:gray">Message Description</ion-label>
+			<ion-item>
+				<ion-textarea [(ngModel)]="noticeDescription" style="border:1px solid lightgray;border-radius:7px" class="textbox" item-height="100"></ion-textarea>
+			</ion-item>
+			<div padding>
+				<button ion-button color="primary" round block (click)="postNotice()">Post</button>
+			</div>
+		</ion-list>
+	</ion-card>
+
+	<ion-card *ngFor="let notice of notices">
+		  <ion-item>
+    <ion-avatar item-start item-left>
+      <img src="assets/img/person_image.jpeg">
+    </ion-avatar>
+	<div item-left>
+    	<h2>{{ notice.post_by }}</h2>
+    	<p>{{ notice.createdDate }}</p>
+	</div>
+  </ion-item>
+		<ion-card-content>
+			<ion-card-title class="order-title">
+				{{notice.title}}
+			</ion-card-title>
+			<p class="notice-description">
+				{{ notice.description }}
+			</p>
+			
+			<p class="notice-date">
+				<span ></span> &nbsp;
+				<!--<ion-icon (click)="editNoticeAlert(notice)" style="color:#F7B002"  name="md-brush" small></ion-icon>&nbsp;
+				<ion-icon (click)="removeNotice(notice.id)" style="color:#C60A0A"   name="md-trash" small></ion-icon>-->
+			</p>
+		</ion-card-content>
+	</ion-card>
+
+</ion-content>

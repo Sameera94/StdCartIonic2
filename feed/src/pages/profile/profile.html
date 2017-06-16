@@ -1,0 +1,80 @@
+<ion-header>
+	<ion-navbar color="silver">
+		<ion-title>
+			My Profile
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<!--<ion-card>
+
+		<ion-item>
+			<ion-avatar item-left item-start >
+				<img src="assets/img/person_image.jpeg">
+			</ion-avatar>
+			<div item-left>
+			<h2>Marty McFly</h2>
+			<p>November 5, 1955</p>
+			</div>
+		</ion-item>
+
+	
+
+		<ion-card-content>
+			<p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa.
+				This is heavy.</p>
+		</ion-card-content>
+
+		<ion-row>
+			<ion-col>
+				<button ion-button color="primary" clear small icon-left>
+        <ion-icon name='thumbs-up'></ion-icon>
+        12 Likes
+      </button>
+			</ion-col>
+			<ion-col>
+				<button ion-button color="primary" clear small icon-left>
+        <ion-icon name='text'></ion-icon>
+        4 Comments
+      </button>
+			</ion-col>
+			<ion-col align-self-center text-center>
+				<ion-note>
+					11h ago
+				</ion-note>
+			</ion-col>
+		</ion-row>
+
+	</ion-card>-->
+	<div style="text-align:center;padding-top:20px;padding-bottom:20px">
+	<img src="assets/img/person_image.jpeg" style="border-radius: 50%;width:140px;height:150px">
+	</div>
+	<div padding>
+	<ion-list>
+
+		<ion-item>
+			<ion-label>Name </ion-label>
+			<ion-input type="text" [(ngModel)]="name" value={{name}}></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label>Email</ion-label>
+			<ion-input type="text" [(ngModel)]="email" ></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label>B'Date</ion-label>
+			<ion-input type="text" [(ngModel)]="bdate"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label>Phone</ion-label>
+			<ion-input type="text" [(ngModel)]="phone"></ion-input>
+		</ion-item>
+	</ion-list>
+	</div>
+	<div padding>
+		<button ion-button block outline color="primary" round (click)="onClickUpdateProfile()">Update Profile</button>
+	</div>
+</ion-content>

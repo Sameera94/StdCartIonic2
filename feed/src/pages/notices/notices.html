@@ -1,0 +1,45 @@
+<ion-header>
+	<ion-navbar color="silver">
+		<ion-title>
+			General Notices
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+
+	<ion-card>
+		<ion-item style="text-align:center;font-size:20px;color:gray">Post New Notice</ion-item>
+		<ion-list>
+			<ion-label style="padding-left:17px;color:gray">Notice Title</ion-label>
+			<ion-item>
+				<ion-input [(ngModel)]="noticeTitle" style="border:1px solid lightgray;border-radius:7px" type="text"></ion-input>
+			</ion-item>
+			<ion-label style="padding-left:17px;padding-top:3%;color:gray">Notice Description</ion-label>
+			<ion-item>
+				<ion-textarea [(ngModel)]="noticeDescription" style="border:1px solid lightgray;border-radius:7px" class="textbox" item-height="100"></ion-textarea>
+			</ion-item>
+			<div padding>
+				<button ion-button color="primary" block (click)="postNotice()">Post</button>
+			</div>
+		</ion-list>
+	</ion-card>
+
+	<ion-card *ngFor="let notice of notices">
+		<ion-card-content>
+			<ion-card-title class="order-title">
+				{{notice.title}}
+			</ion-card-title>
+			<p class="notice-description">
+				{{ notice.body }}
+			</p>
+			
+			<p class="notice-date">
+				<span >{{ notice.createdDate }}</span> &nbsp;
+				<ion-icon (click)="editNoticeAlert(notice)" style="color:#F7B002"  name="md-brush" small></ion-icon>&nbsp;
+				<ion-icon (click)="removeNotice(notice.id)" style="color:#C60A0A"   name="md-trash" small></ion-icon>
+			</p>
+		</ion-card-content>
+	</ion-card>
+
+</ion-content>

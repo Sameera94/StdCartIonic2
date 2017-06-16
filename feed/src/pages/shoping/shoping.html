@@ -1,0 +1,76 @@
+<!--<ion-header>
+	<ion-navbar color="silver">
+		<ion-title>Shoping</ion-title>
+		<ion-buttons end>
+			<button ion-button icon-only (click)="presentPopover($event)">
+				<ion-icon name="md-cart"></ion-icon>
+			</button>
+		</ion-buttons>
+	</ion-navbar>
+</ion-header>-->
+
+<ion-header>
+	<ion-navbar>
+		<ion-searchbar (ionInput)="searchItems($event)"></ion-searchbar>
+		<ion-buttons end>
+			&nbsp;
+			<button ion-button icon-only (click)="presentPopover($event)">
+				<ion-icon name="md-cart"></ion-icon>
+			</button>
+		</ion-buttons>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+
+	<!--<ion-row>
+		<ion-col col-12>
+			<ion-searchbar (ionInput)="searchItems($event)"></ion-searchbar>
+		</ion-col>
+	</ion-row>-->
+
+	<ion-card>
+		<ion-row>
+			<ion-col col-6>
+				<ion-item>
+					<ion-label>Category</ion-label>
+					<ion-select [(ngModel)]="category" interface="popover" #C (ionChange)="onCategoryChange(category)">
+						<ion-option value="all">All</ion-option>
+						<ion-option value="mobile">Mobile</ion-option>
+						<ion-option value="kitchen">Kitchen</ion-option>
+					</ion-select>
+				</ion-item>
+			</ion-col>
+			<ion-col col-6>
+				<ion-item>
+					<ion-label>Price</ion-label>
+					<ion-select [(ngModel)]="price" interface="popover" #C (ionChange)="onPriceChange(price)">
+						<ion-option value="highttolow"> High&nbsp;></ion-option>
+						<ion-option value="lowtohigh">Low&nbsp;
+							<</ion-option>
+					</ion-select>
+				</ion-item>
+			</ion-col>
+		</ion-row>
+	</ion-card>
+
+
+
+	<ion-grid>
+		<div style="width:100%;margin-left:0.5%;margin-top:0.5%">
+			<ion-col style="width:49%;display:inline-block" *ngFor="let item of updatedItems">
+				<ion-card (click)="onClickItem(item)">
+					<ion-card-content style="padding:3%">
+						<!--<ion-icon name="md-call" extra-large></ion-icon>-->
+						<img src="../assets/img/{{item.image}}" />
+					</ion-card-content>
+					<ion-item>
+						<h2>{{ item.name }}</h2>
+						<h2 style="color:gray">Rs.{{ item.price }}.00</h2>
+					</ion-item>
+				</ion-card>
+			</ion-col>
+		</div>
+	</ion-grid>
+
+</ion-content>

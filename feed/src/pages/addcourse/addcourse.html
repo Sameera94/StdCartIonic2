@@ -1,0 +1,24 @@
+<ion-header>
+	<ion-navbar color="silver">
+		<ion-title>
+			Add New Course
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+
+	<ion-card>
+		<ion-item style="text-align:center;font-size:20px;color:gray">Post New Notice</ion-item>
+		<ion-list>
+			<ion-label style="padding-left:17px;color:gray">Notice Title</ion-label>
+			<ion-item>
+				<ion-input [(ngModel)]="courseTitle" style="border:1px solid lightgray;border-radius:7px" type="text"></ion-input>
+			</ion-item>
+			<div padding>
+				<button ion-button color="primary" block (click)="postCourse()">Add</button>
+			</div>
+		</ion-list>
+	</ion-card>
+
+</ion-content>

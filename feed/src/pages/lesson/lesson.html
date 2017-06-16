@@ -1,0 +1,86 @@
+<ion-header>
+	<ion-navbar color="silver">
+		<ion-title>
+			
+		</ion-title>
+		<!--<ion-buttons end>
+			<button ion-button icon-only (click)="stopTimer()">
+				<ion-icon name="md-timer"></ion-icon>
+			</button>
+		</ion-buttons>-->
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+
+	<img src="../assets/img/classroom.jpeg" />
+	<ion-row padding>
+		<ion-col>
+			<ion-card-title>
+				{{contentTitle}}
+			</ion-card-title>
+			<p>
+				{{contentDescription}}
+			</p>
+
+			<p>
+				{{contentDescription}}
+			</p>
+			<p>
+				{{contentDescription}}
+			</p>
+
+		</ion-col>
+	</ion-row>
+
+	<ion-row no-padding>
+		<ion-col>
+			<button ion-button clear small color="primary" icon-left>
+          			<ion-icon name='star'></ion-icon>
+          			Favorite
+        		</button>
+		</ion-col>
+		<ion-col text-center>
+			<button ion-button clear small color="primary" icon-left>
+         		 	<ion-icon name='musical-notes'></ion-icon>
+          			Listen
+       			</button>
+		</ion-col>
+		<ion-col text-right>
+			<button ion-button clear small color="primary" icon-left>
+          			<ion-icon name='share-alt'></ion-icon>
+          			Submit Answers
+        		</button>
+		</ion-col>
+	</ion-row>
+
+
+	<ion-card class="cards-list-demo">
+    <ion-card-header>
+      Assignment Submitions
+    </ion-card-header>
+
+    <ion-list>
+      <button ion-item>
+        <ion-icon name='planet' item-start></ion-icon>
+        &nbsp;&nbsp;Assignment 1
+		<span item-right style="color:green">Pass</span>
+      </button>
+
+	  <button ion-item>
+        <ion-icon name='planet' item-start></ion-icon>
+        &nbsp;&nbsp;Assignment 2
+		<span item-right style="color: red">Not Submitted</span>
+      </button>
+
+	  <button ion-item>
+        <ion-icon name='planet' item-start></ion-icon>
+        &nbsp;&nbsp;Assignment 3
+		<span item-right style="color:orange">Submitted</span>
+      </button>
+
+    </ion-list>
+  </ion-card>
+
+
+</ion-content>

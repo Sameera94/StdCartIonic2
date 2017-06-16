@@ -1,0 +1,83 @@
+<ion-header>
+	<ion-navbar color="silver">
+		<ion-title>SLIIT - Self Care</ion-title>
+		<ion-buttons end>
+
+		</ion-buttons>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<ion-grid>
+  		<ion-row>
+    		<ion-col col-6>
+				<ion-card (click)="onClickCourseList()">
+					<ion-card-content>	
+						<ion-icon name="md-albums" extra-large></ion-icon>
+					</ion-card-content>
+					<ion-item>
+						<h2>Courses</h2>
+					</ion-item>
+				</ion-card>
+			</ion-col>
+			<ion-col col-6>
+				<ion-card (click)="onClickShoping()">
+					<ion-card-content>
+						<ion-icon name="md-checkbox" extra-large></ion-icon>
+					</ion-card-content>
+					<ion-item>
+						<h2>Forum</h2>
+					</ion-item>
+				</ion-card>
+			</ion-col>
+  		</ion-row>
+		<ion-row>
+    		<ion-col col-6>
+				<ion-card>
+					<ion-card-content>
+						<ion-icon name="md-grid" extra-large></ion-icon>
+					</ion-card-content>
+					<ion-item>
+						<h2>Time Tables</h2>
+					</ion-item>
+				</ion-card>
+			</ion-col>
+			<ion-col col-6>
+				<ion-card (click)="onClickProfile()">
+					<ion-card-content>
+						<ion-icon name="md-contact" extra-large></ion-icon>
+					</ion-card-content>
+					<ion-item>
+						<h2>Profile</h2>
+					</ion-item>
+				</ion-card>
+			</ion-col>
+			
+			
+  		</ion-row>
+		<ion-row>
+    		
+			<ion-col col-6 (click)="onClickFeedsPage()" >
+				<ion-card>
+					<ion-card-content>
+						<ion-icon name="medical" extra-large></ion-icon>
+					</ion-card-content>
+					<ion-item>
+						<h2>View Feedbacks</h2>
+					</ion-item>
+				</ion-card>
+			</ion-col>
+			<ion-col col-6>
+				<!--<ion-card (click)="onClickExtra()">
+					<ion-card-content>
+						<ion-icon name="medical" extra-large></ion-icon>
+					</ion-card-content>
+					<ion-item>
+						<h2>Feedbacks</h2>
+					</ion-item>
+				</ion-card>-->
+			</ion-col>
+  		</ion-row>
+</ion-grid>
+
+</ion-content>
